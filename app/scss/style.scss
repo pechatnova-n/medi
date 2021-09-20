@@ -1,0 +1,44 @@
+@import "nullstyle.scss";
+@import "ibg.scss";
+
+
+$gilroy: 'Gilroy', sans-serif;
+
+
+$white: #FFFFFF;
+$light: #4fbfa5;
+$dark: #00868A;
+$black: #000000;
+$gray: #B3B3B3;
+
+
+
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100%;
+}
+body{
+  height: 100%;
+  font: 14px/22px $gilroy;
+  color: $black;
+}
+.content{
+  flex: 1 0 50%;
+}
+.container{
+  max-width: 1325px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+h1{}
+h2{}
+h3{}
+
+
+
+
+
+
