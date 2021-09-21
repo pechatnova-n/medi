@@ -10,7 +10,7 @@ $light: #4fbfa5;
 $dark: #00868A;
 $black: #000000;
 $gray: #B3B3B3;
-
+$bg: rgba(0%, 53%, 54%, 0.2);
 
 
 .wrapper{
@@ -128,6 +128,7 @@ h3{}
   padding: 0 25px;
   color: $white;
   background: $dark;
+  transition: all 0.4s ease 0s;
   &:hover{
     background: $light;
     transition: all 0.4s ease 0s;
@@ -161,6 +162,7 @@ h3{}
   }
   &_light{
     background: $light;
+    transition: all 0.4s ease 0s;
     &:hover{
       background: $dark;
       transition: all 0.4s ease 0s;
@@ -175,12 +177,162 @@ h3{}
     text-align: center;
   }
 }
+.arrow{
+  position: relative;
+  width: 50px;
+  height: 45px;
+  border: 1px solid $white;
+  cursor: pointer;
+  transition: background-color 0.4s ease 0s;
+  &:hover{
+    background: $light;
+    transition: background-color 0.4s ease 0s;
+  }
+  span{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 1px;
+    background: $white;
+    &:before{
+      position: absolute;
+      display: block;
+      top: 2px;
+      right: -2px;
+      width: 7px;
+      height: 1px;
+      content: "";
+      background: $white;
+      transform: rotate(-45deg);
+    }
+    &:after{
+      position: absolute;
+      display: block;
+      top: -2px;
+      right: -2px;
+      width: 7px;
+      height: 1px;
+      content: "";
+      background: $white;
+      transform: rotate(45deg);
+    }
+  }
+}
+
+
+
+
+.special{
+  padding: 80px 0 80px 0;
+  background: $bg;
+  &__row{
+    padding-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 24px;
+  }
+  &__item{
+    position: relative;
+  }
+  &__img{
+    display: block;
+  }
+  &__img img{
+    width: 100%;
+  }
+  &__descr{
+    padding: 25px 30px;
+    background: $dark;
+    display: grid;
+    grid-template-columns: auto 50px;
+    grid-column-gap: 10px;
+    align-items: center;
+  }
+  &__info{
+    font: bold 21px/32px $gilroy;
+    color: $white;
+  }
+
+}
+.special__item .btn{
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  text-align: left;
+  line-height: 22px;
+  padding: 9px 30px;
+
+}
+
+.news{
+  padding-bottom: 100px;
+  &__row{
+    display: grid;
+    grid-template-columns: 40% 60%;
+  }
+  &__control{
+    background: $light;
+  }
+  &__tit{
+    padding: 35px 40px;
+  }
+  &__tabs-links{}
+  &__tabs-link{
+    display: block;
+    font: 18px/28px $gilroy;
+    color: $white;
+    padding: 35px 40px;
+    &_active{
+      background: $dark;
+    }
+  }
+  &__tabs-body{
+    display: none;
+    padding: 35px 60px;
+    background: $bg;
+    &_active{
+      display: block;
+    }
+  }
+  &__hat{
+    font: bold 24px/36px $gilroy;
+    color: $black;
+    margin: 0 0 25px 0;
+  }
+  &__list{}
+  &__list li{
+    position: relative;
+    margin: 0 0 15px 0;
+    padding: 0 0 0 20px;
+    &:before{
+      position: absolute;
+      top: 8px;
+      left: 0;
+      width: 6px;
+      height: 6px;
+      display: block;
+      content: "";
+      background: $dark;
+      border-radius: 50%;
+    }
+
+
+    &:last-child{
+      margin: 0;
+    }
+  }
+
+}
+
 
 
 
 .footer{
   &__main{
-    padding: 300px 0 80px 0;
+    padding: 80px 0 80px 0;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 24px;
