@@ -37,6 +37,195 @@ h1{}
 h2{}
 h3{}
 
+.header{
+  background: $light;
+}
+.top-line{
+  background: $white;
+  height: 90px;
+  &__row{
+    border-right: 1px solid $gray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__item{
+    height: 100%;
+    padding: 0 30px;
+    border-left: 1px solid $gray;
+    text-align: center;
+    align-self: center;
+    align-items: center;
+  }
+  &__logo_main{
+    display: inline-block;
+    width: 82px;
+    height: 52px;
+    background: url("../images/logo.svg") no-repeat;
+    background-size: 100% 100%;
+    vertical-align: middle;
+  }
+  &__logo_descr{
+    display: inline-block;
+    width: 100px;
+    height: 28px;
+    margin-left: 5px;
+    background: url("../images/medi.svg") no-repeat;
+    background-size: 100% 100%;
+    vertical-align: middle;
+  }
+  &__phone, &__salons{
+    font-size: 16px;
+    color: $black;
+    white-space: nowrap;
+    &:hover{
+      color: $dark;
+    }
+  }
+  &__salons{
+    position: relative;
+    padding-right: 30px;
+  }
+  &__circle{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    display: block;
+    background: $light;
+    border-radius: 50%;
+    z-index: 1;
+    &:before{
+      position: absolute;
+      top: 8px;
+      right: 5px;
+      width: 10px;
+      height: 10px;
+      content: "";
+      display: block;
+      border-top: 7px solid $white;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      z-index: 2;
+    }
+  }
+  &__block{}
+}
+
+.social{
+  display: flex;
+  align-items: center;
+  &__link{
+    padding: 0 30px;
+  }
+}
+.btn{
+  display: inline-block;
+  text-align: center;
+  font: 18px/40px $gilroy;
+  padding: 0 25px;
+  color: $white;
+  background: $dark;
+  &:hover{
+    background: $light;
+    transition: all 0.4s ease 0s;
+  }
+  &_eye{
+    position: relative;
+    font: 14px/40px $gilroy;
+    color: $white;
+    text-transform: uppercase;
+    padding: 0 15px 0 50px;
+    background: $dark;
+    white-space: nowrap;
+    &:before{
+      position: absolute;
+      left: 15px;
+      top: 12px;
+      display: block;
+      width: 26px;
+      height: 16px;
+      content: "";
+      background: url("../images/icon-eye.svg") no-repeat;
+      background-size: 100% 100%;
+    }
+    &:hover{
+
+    }
+  }
+  &_upper{
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+  &_light{
+    background: $light;
+    &:hover{
+      background: $dark;
+      transition: all 0.4s ease 0s;
+    }
+  }
+}
+.title{
+  font: bold 48px/52px $gilroy;
+  color: $white;
+  &_green{
+    color: $dark;
+    text-align: center;
+  }
+}
+
+
+
+.footer{
+  &__main{
+    padding: 300px 0 80px 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 24px;
+  }
+  &__col{}
+  &__item{
+    margin-bottom: 30px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+  &__title{
+    font: bold 21px/32px $gilroy;
+    margin: 0 0 20px 0;
+  }
+  &__block{}
+  &__sub-link{
+    display: block;
+    color: $black;
+    margin-bottom: 10px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+    &:hover{
+      color: $dark;
+      transition: all 0.3s ease 0s;
+    }
+  }
+  &__hat{
+    font: bold 11px/20px $gilroy;
+    text-transform: uppercase;
+    color: $gray;
+    margin: 0 0 10px 0;
+  }
+  &__info{}
+  &__descr{
+    display: block;
+    font: bold 21px/32px $gilroy;
+    margin: 0 0 15px 0;
+    &:last-child{
+      margin: 0;
+    }
+  }
+}
+
 
 
 
