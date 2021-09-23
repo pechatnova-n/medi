@@ -81,18 +81,22 @@ h3{}
   background: $white;
   height: 90px;
   &__row{
-    border-right: 1px solid $gray;
     display: flex;
-    justify-content: space-between;
+    border-right: 1px solid $gray;
     align-items: center;
+    align-content: stretch;
+    flex-wrap: nowrap;
+
   }
   &__item{
-    height: 100%;
-    padding: 0 30px;
+    display: flex;
+    flex: 1 1 auto;
+    height: 90px;
     border-left: 1px solid $gray;
     text-align: center;
-    align-self: center;
     align-items: center;
+    align-content: center;
+    justify-content: center;
   }
   &__logo_main{
     display: inline-block;
@@ -154,8 +158,21 @@ h3{}
 .social{
   display: flex;
   align-items: center;
+  flex: 0 0 auto;
   &__link{
+    display: flex;
+    height: 90px;
+    width: 80px;
     padding: 0 30px;
+    text-align: center;
+    vertical-align: middle;
+    border-right: 1px solid $gray;
+    &:last-child{
+      border-right: none;
+    }
+    img{
+
+    }
   }
 }
 .btn{
@@ -274,6 +291,7 @@ h3{}
     }
   }
 }
+
 
 
 .first-screen{
@@ -557,6 +575,44 @@ h3{}
     margin: 0 0 15px 0;
     &:last-child{
       margin: 0;
+    }
+  }
+}
+.bottom-line{
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  align-items: center;
+  align-content: center;
+  border-top: 1px solid $gray;
+  border-right: 1px solid $gray;
+  border-left: 1px solid $gray;
+  box-sizing: border-box;
+  &__item{
+    border-left: 1px solid $gray;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:first-child{
+      border-right: none;
+    }
+  }
+  &__copy{
+    display: grid;
+    grid-template-columns: 55% 45%;
+    grid-column-gap: 5%;
+    align-items: center;
+    padding: 0 25px;
+    font: 12px/18px $gilroy;
+    color: $black;
+  }
+  &__copy-link{
+    text-decoration: underline;
+    color: $black;
+    transition: all 0.4s ease 0s;
+    &:hover{
+      text-decoration: none;
+      transition: all 0.4s ease 0s;
     }
   }
 }
