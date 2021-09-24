@@ -278,16 +278,19 @@ h3{}
       transform: rotate(45deg);
     }
   }
-  span.arrow_reverse{
-    &:before{
-      top: 2px;
-      left: -2px;
-      transform: rotate(45deg);
-    }
-    &:after{
-      top: -2px;
-      left: -2px;
-      transform: rotate(-45deg);
+  &_reverse{
+    span{
+      position: relative;
+      &:before{
+        top: 2px;
+        left: -2px;
+        transform: rotate(45deg);
+      }
+      &:after{
+        top: -2px;
+        left: -2px;
+        transform: rotate(-45deg);
+      }
     }
   }
 }
@@ -594,7 +597,7 @@ h3{}
     align-items: center;
     justify-content: center;
     &:first-child{
-      border-right: none;
+      border-left: none;
     }
   }
   &__copy{

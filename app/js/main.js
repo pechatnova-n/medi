@@ -1,5 +1,14 @@
 
 
+$('.first-screen__arrows .arrow_reverse').on('click', function(e){
+    $('.first-screen__slider').slick('slickPrev');
+});
+$('.first-screen__arrows .arrow').on('click', function(e){
+    $('.first-screen__slider').slick('slickNext');
+});
+
+
+
 //slick-slider
 $('.first-screen__slider').slick({
     dots: false,
@@ -7,7 +16,7 @@ $('.first-screen__slider').slick({
     speed: 700,
     slidesToShow: 1,
     slidesToScroll: 1,
-    arrows: true
+    arrows: false,
 });
 
 
